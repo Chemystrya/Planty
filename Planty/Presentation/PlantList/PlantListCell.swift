@@ -55,6 +55,9 @@ final class PlantListCell: UITableViewCell {
             nameLabel.leadingAnchor.constraint(equalTo: imagePlant.trailingAnchor, constant: 16),
             nameLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16)
         ])
+
+        imagePlant.layer.cornerRadius = 8
+        imagePlant.clipsToBounds = true
     }
     // конфигурирует ячейку
     func configure(plant: Plant) {
