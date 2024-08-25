@@ -13,16 +13,21 @@ struct Plant {
     
     static func createDataSource() -> [Plant] {
         [
-            Plant(name: "Adobe Hot Pepper", image: UIImage(named: "adobeHotPepper")),
-            Plant(name: "Aglaonema Spring", image: UIImage(named: "aglaonemaSpring")),
-            Plant(name: "Bamboo Palm", image: UIImage(named: "bambooPalm")),
-            Plant(name: "Bird of Paradise", image: UIImage(named: "birdOfParadise")),
-            Plant(name: "Bromeliad Pineapple", image: UIImage(named: "bromeliadPineapple")),
-            Plant(name: "Bromeliad Summer", image: UIImage(named: "bromeliadSummer")),
-            Plant(name: "Cat Grass", image: UIImage(named: "catGrass")),
-            Plant(name: "Catnip", image: UIImage(named: "catnip")),
-            Plant(name: "Chamomile", image: UIImage(named: "chamomile")),
-            Plant(name: "Coconut Palm", image: UIImage(named: "coconutPalm"))
+            Plant(name: "Аглаонема Мария", image: UIImage(named: "aglaonemaMaria")),
+            Plant(name: "Антуриум Блэк", image: UIImage(named: "anthuriumBlack")),
+            Plant(name: "Антуриум Карма", image: UIImage(named: "anthuriumKarma")),
+            Plant(name: "Антуриум Лилли", image: UIImage(named: "anthuriumLilly")),
+            Plant(name: "Араукария", image: UIImage(named: "araucaria")),
+            Plant(name: "Аспидистра Элатиор", image: UIImage(named: "aspidistraElatior")),
+            Plant(name: "Драцена Джанет Кейг", image: UIImage(named: "dracenaJanetCraig")),
+            Plant(name: "Фикус Бенджамина", image: UIImage(named: "ficusBendjamina")),
+            Plant(name: "Фикус Эластика Мелини", image: UIImage(named: "ficusElasticaMelanie")),
+            Plant(name: "Фикус Лирата", image: UIImage(named: "ficusLirata")),
+            Plant(name: "Монстера Минима", image: UIImage(named: "monsteraMinima")),
+            Plant(name: "Монстера Монки Маск", image: UIImage(named: "monsteraMonkeyMask")),
+            Plant(name: "Сансевиерия Цилиндрика", image: UIImage(named: "sansevieriaCylindrica")),
+            Plant(name: "Сансевиерия Цилинрика Коса", image: UIImage(named: "sansevieriaCylindricaKosa")),
+            Plant(name: "Шеффлера Герда", image: UIImage(named: "scheffleraGerda"))
         ]
     }
 }
