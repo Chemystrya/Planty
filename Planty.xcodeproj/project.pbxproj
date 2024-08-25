@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		506B9CE22C7B8EC500220BA4 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506B9CE12C7B8EC500220BA4 /* NavigationView.swift */; };
 		695224B82C78AF880033A64F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695224B72C78AF880033A64F /* AppDelegate.swift */; };
 		695224BA2C78AF880033A64F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695224B92C78AF880033A64F /* SceneDelegate.swift */; };
 		695224C12C78AF8A0033A64F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 695224C02C78AF8A0033A64F /* Assets.xcassets */; };
@@ -15,8 +16,8 @@
 		695224D92C78AF8B0033A64F /* PlantyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695224D82C78AF8B0033A64F /* PlantyUITests.swift */; };
 		695224DB2C78AF8B0033A64F /* PlantyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695224DA2C78AF8B0033A64F /* PlantyUITestsLaunchTests.swift */; };
 		695224EA2C78B2180033A64F /* PlantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695224E92C78B2180033A64F /* PlantListViewController.swift */; };
-		695224F12C7918E70033A64F /* ModelPlanty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695224F02C7918E70033A64F /* ModelPlanty.swift */; };
-		695224F32C7920AC0033A64F /* PlantyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695224F22C7920AC0033A64F /* PlantyCell.swift */; };
+		695224F12C7918E70033A64F /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695224F02C7918E70033A64F /* Plant.swift */; };
+		695224F32C7920AC0033A64F /* PlantListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695224F22C7920AC0033A64F /* PlantListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		506B9CE12C7B8EC500220BA4 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		695224B42C78AF880033A64F /* Planty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		695224B72C78AF880033A64F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		695224B92C78AF880033A64F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,8 +51,8 @@
 		695224D82C78AF8B0033A64F /* PlantyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantyUITests.swift; sourceTree = "<group>"; };
 		695224DA2C78AF8B0033A64F /* PlantyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		695224E92C78B2180033A64F /* PlantListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListViewController.swift; sourceTree = "<group>"; };
-		695224F02C7918E70033A64F /* ModelPlanty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPlanty.swift; sourceTree = "<group>"; };
-		695224F22C7920AC0033A64F /* PlantyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantyCell.swift; sourceTree = "<group>"; };
+		695224F02C7918E70033A64F /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		695224F22C7920AC0033A64F /* PlantListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		506B9CDB2C7B7AD100220BA4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				695224F02C7918E70033A64F /* Plant.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		506B9CE02C7B8EA100220BA4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				506B9CE12C7B8EC500220BA4 /* NavigationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		695224AB2C78AF870033A64F = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +119,7 @@
 		695224B62C78AF880033A64F /* Planty */ = {
 			isa = PBXGroup;
 			children = (
+				506B9CDB2C7B7AD100220BA4 /* Models */,
 				695224E72C78B1CD0033A64F /* Presentation */,
 				695224B72C78AF880033A64F /* AppDelegate.swift */,
 				695224B92C78AF880033A64F /* SceneDelegate.swift */,
@@ -131,6 +150,7 @@
 		695224E72C78B1CD0033A64F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				506B9CE02C7B8EA100220BA4 /* Views */,
 				695224E82C78B1DC0033A64F /* PlantList */,
 			);
 			path = Presentation;
@@ -140,8 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				695224E92C78B2180033A64F /* PlantListViewController.swift */,
-				695224F02C7918E70033A64F /* ModelPlanty.swift */,
-				695224F22C7920AC0033A64F /* PlantyCell.swift */,
+				695224F22C7920AC0033A64F /* PlantListCell.swift */,
 			);
 			path = PlantList;
 			sourceTree = "<group>";
@@ -276,10 +295,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				695224F12C7918E70033A64F /* ModelPlanty.swift in Sources */,
-				695224F32C7920AC0033A64F /* PlantyCell.swift in Sources */,
+				695224F12C7918E70033A64F /* Plant.swift in Sources */,
+				695224F32C7920AC0033A64F /* PlantListCell.swift in Sources */,
 				695224B82C78AF880033A64F /* AppDelegate.swift in Sources */,
 				695224EA2C78B2180033A64F /* PlantListViewController.swift in Sources */,
+				506B9CE22C7B8EC500220BA4 /* NavigationView.swift in Sources */,
 				695224BA2C78AF880033A64F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,7 +479,6 @@
 				INFOPLIST_FILE = Planty/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -487,7 +506,6 @@
 				INFOPLIST_FILE = Planty/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
