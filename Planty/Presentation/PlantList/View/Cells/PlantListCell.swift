@@ -7,6 +7,11 @@
 
 import UIKit
 
+struct PlantListCellViewModel {
+    let image: UIImage?
+    let name: String
+}
+
 final class PlantListCell: UITableViewCell {
     let containerView = UIView()
     let imagePlant = UIImageView()
@@ -41,8 +46,7 @@ final class PlantListCell: UITableViewCell {
         
         imagePlant.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            imagePlant.topAnchor.constraint(equalTo: containerView.topAnchor),
-            imagePlant.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+            imagePlant.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
             imagePlant.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
             imagePlant.heightAnchor.constraint(equalToConstant: 48),
             imagePlant.widthAnchor.constraint(equalToConstant: 48)
@@ -60,8 +64,19 @@ final class PlantListCell: UITableViewCell {
         imagePlant.clipsToBounds = true
     }
     // конфигурирует ячейку
-    func configure(plant: Plant) {
-        imagePlant.image = plant.image
-        nameLabel.text = plant.name
+    func configure(viewModel: PlantListCellViewModel) {
+        imagePlant.image = viewModel.image
+        nameLabel.text = viewModel.name
     }
+}
+
+#Preview {
+    let cell = PlantListCell()
+    cell.configure(
+        viewModel: PlantListCellViewModel(
+            image: UIImage(named: "aglaonemaMaria"), 
+            name: "Роза"
+        )
+    )
+    return cell
 }

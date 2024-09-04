@@ -7,11 +7,25 @@
 
 import UIKit
 
+enum PlantListCellType {
+    case listingCell(PlantListCellViewModel)
+}
+
+protocol PlantListViewInput: AnyObject {
+    func reloadTableView(with dataSource: [PlantListCellType])
+}
+
+protocol PlantListViewOutput: AnyObject {
+    func viewLoaded()
+}
+
 final class PlantListViewController: UIViewController {
-    private let plants = Plant.createDataSource()
+    var presenter: PlantListViewOutput?
+
+    private var dataSource: [PlantListCellType] = []
     private let tableView = UITableView()
     private let navigationView = NavigationView()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,7 +33,10 @@ final class PlantListViewController: UIViewController {
         configure()
         
         tableView.register(PlantListCell.self, forCellReuseIdentifier: "PlantyCell")
+        tableView.register(PlantInfoImageCell.self, forCellReuseIdentifier: "PlantyImageCell")
         tableView.dataSource = self
+
+        presenter?.viewLoaded()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,18 +46,34 @@ final class PlantListViewController: UIViewController {
     }
 }
 
+extension PlantListViewController: PlantListViewInput {
+    func reloadTableView(with dataSource: [PlantListCellType]) {
+        self.dataSource = dataSource
+
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
+    }
+}
+
 extension PlantListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        plants.count
+        dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlantyCell", for: indexPath) as? PlantListCell else { 
-            return UITableViewCell()
+        let type = dataSource[indexPath.row]
+
+        switch type {
+        case .listingCell(let viewModel):
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: "PlantyCell",
+                for: indexPath
+            ) as? PlantListCell else { return UITableViewCell() }
+
+            cell.configure(viewModel: viewModel)
+            return cell
         }
-        
-        cell.configure(plant: plants[indexPath.row])
-        return cell
     }
 }
 
