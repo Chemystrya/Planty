@@ -8,7 +8,7 @@
 import UIKit
 
 final class NavigationView: UIView {
-    let titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 22, weight: .bold)
         label.textAlignment = .center
