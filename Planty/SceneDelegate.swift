@@ -17,8 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        let plantListAssembly = PlantListAssembly()
-        let viewController = plantListAssembly.assemble()
+//        let viewController = PlantListAssembly.assemble()
+        let viewController = PlantInfoAssembly.assemble(with: PlantInfoInputModel(id: 15))
         window.rootViewController = viewController
         self.window = window
         window.makeKeyAndVisible()

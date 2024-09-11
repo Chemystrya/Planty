@@ -33,7 +33,6 @@ final class PlantListViewController: UIViewController {
         configure()
         
         tableView.register(PlantListCell.self, forCellReuseIdentifier: "PlantyCell")
-        tableView.register(PlantInfoImageCell.self, forCellReuseIdentifier: "PlantyImageCell")
         tableView.dataSource = self
 
         presenter?.viewLoaded()

@@ -7,11 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		502F274D2C908DA0000372CB /* ChipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F274C2C908DA0000372CB /* ChipsView.swift */; };
+		502F274F2C9091FF000372CB /* PlantInfoChipsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F274E2C9091FF000372CB /* PlantInfoChipsCollectionView.swift */; };
+		502F27512C909606000372CB /* PlantInfoChipsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F27502C909606000372CB /* PlantInfoChipsCollectionViewCell.swift */; };
+		502F27542C90F0DD000372CB /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F27532C90F0DD000372CB /* String+Ext.swift */; };
 		5066CF9A2C7CA16F00C71EC9 /* PlantListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066CF992C7CA16F00C71EC9 /* PlantListService.swift */; };
 		5066CF9F2C83C1A200C71EC9 /* PlantListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066CF9E2C83C1A200C71EC9 /* PlantListInteractor.swift */; };
 		5066CFA22C83C3FC00C71EC9 /* PlantListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066CFA12C83C3FC00C71EC9 /* PlantListPresenter.swift */; };
 		5066CFA52C83C69E00C71EC9 /* PlantListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066CFA42C83C69E00C71EC9 /* PlantListAssembly.swift */; };
 		5066CFAE2C88EFEE00C71EC9 /* PlantInfoImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066CFAD2C88EFEE00C71EC9 /* PlantInfoImageCell.swift */; };
+		5066CFB02C89D71700C71EC9 /* PlantInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066CFAF2C89D71700C71EC9 /* PlantInfoViewController.swift */; };
+		5066CFB32C89D89600C71EC9 /* PlantInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066CFB22C89D89600C71EC9 /* PlantInfoInteractor.swift */; };
+		5066CFB62C89D97300C71EC9 /* PlantInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066CFB52C89D97300C71EC9 /* PlantInfoPresenter.swift */; };
+		5066CFB92C89DA0D00C71EC9 /* PlantInfoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066CFB82C89DA0D00C71EC9 /* PlantInfoAssembly.swift */; };
+		5066CFBE2C89DB4300C71EC9 /* PlantInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066CFBD2C89DB4300C71EC9 /* PlantInfoService.swift */; };
+		5066CFC02C8A235400C71EC9 /* PlantInfoLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066CFBF2C8A235400C71EC9 /* PlantInfoLabelCell.swift */; };
+		5066CFC22C8B31CD00C71EC9 /* PlantInfoDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066CFC12C8B31CD00C71EC9 /* PlantInfoDescriptionCell.swift */; };
 		506B9CE22C7B8EC500220BA4 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506B9CE12C7B8EC500220BA4 /* NavigationView.swift */; };
 		695224B82C78AF880033A64F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695224B72C78AF880033A64F /* AppDelegate.swift */; };
 		695224BA2C78AF880033A64F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695224B92C78AF880033A64F /* SceneDelegate.swift */; };
@@ -43,11 +54,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		502F274C2C908DA0000372CB /* ChipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipsView.swift; sourceTree = "<group>"; };
+		502F274E2C9091FF000372CB /* PlantInfoChipsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInfoChipsCollectionView.swift; sourceTree = "<group>"; };
+		502F27502C909606000372CB /* PlantInfoChipsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInfoChipsCollectionViewCell.swift; sourceTree = "<group>"; };
+		502F27532C90F0DD000372CB /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		5066CF992C7CA16F00C71EC9 /* PlantListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListService.swift; sourceTree = "<group>"; };
 		5066CF9E2C83C1A200C71EC9 /* PlantListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListInteractor.swift; sourceTree = "<group>"; };
 		5066CFA12C83C3FC00C71EC9 /* PlantListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListPresenter.swift; sourceTree = "<group>"; };
 		5066CFA42C83C69E00C71EC9 /* PlantListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListAssembly.swift; sourceTree = "<group>"; };
 		5066CFAD2C88EFEE00C71EC9 /* PlantInfoImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInfoImageCell.swift; sourceTree = "<group>"; };
+		5066CFAF2C89D71700C71EC9 /* PlantInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInfoViewController.swift; sourceTree = "<group>"; };
+		5066CFB22C89D89600C71EC9 /* PlantInfoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInfoInteractor.swift; sourceTree = "<group>"; };
+		5066CFB52C89D97300C71EC9 /* PlantInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInfoPresenter.swift; sourceTree = "<group>"; };
+		5066CFB82C89DA0D00C71EC9 /* PlantInfoAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInfoAssembly.swift; sourceTree = "<group>"; };
+		5066CFBD2C89DB4300C71EC9 /* PlantInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInfoService.swift; sourceTree = "<group>"; };
+		5066CFBF2C8A235400C71EC9 /* PlantInfoLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInfoLabelCell.swift; sourceTree = "<group>"; };
+		5066CFC12C8B31CD00C71EC9 /* PlantInfoDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInfoDescriptionCell.swift; sourceTree = "<group>"; };
 		506B9CE12C7B8EC500220BA4 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		695224B42C78AF880033A64F /* Planty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		695224B72C78AF880033A64F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,9 +112,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		502F27522C90F0C8000372CB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				502F27532C90F0DD000372CB /* String+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5066CF972C7CA15300C71EC9 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				5066CFBA2C89DAEC00C71EC9 /* PlantInfo */,
 				5066CF982C7CA15A00C71EC9 /* PlantList */,
 			);
 			path = Service;
@@ -142,6 +173,9 @@
 		5066CFA72C88EDEF00C71EC9 /* PlantInfo */ = {
 			isa = PBXGroup;
 			children = (
+				5066CFB72C89D9F200C71EC9 /* Assembly */,
+				5066CFB42C89D94B00C71EC9 /* Presenter */,
+				5066CFB12C89D86B00C71EC9 /* Interactor */,
 				5066CFA82C88EDF700C71EC9 /* View */,
 			);
 			path = PlantInfo;
@@ -151,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				5066CFAA2C88EE0900C71EC9 /* Cells */,
+				5066CFAF2C89D71700C71EC9 /* PlantInfoViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,8 +202,44 @@
 			isa = PBXGroup;
 			children = (
 				5066CFAD2C88EFEE00C71EC9 /* PlantInfoImageCell.swift */,
+				5066CFBF2C8A235400C71EC9 /* PlantInfoLabelCell.swift */,
+				5066CFC12C8B31CD00C71EC9 /* PlantInfoDescriptionCell.swift */,
+				502F274E2C9091FF000372CB /* PlantInfoChipsCollectionView.swift */,
+				502F27502C909606000372CB /* PlantInfoChipsCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		5066CFB12C89D86B00C71EC9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5066CFB22C89D89600C71EC9 /* PlantInfoInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5066CFB42C89D94B00C71EC9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5066CFB52C89D97300C71EC9 /* PlantInfoPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5066CFB72C89D9F200C71EC9 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				5066CFB82C89DA0D00C71EC9 /* PlantInfoAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		5066CFBA2C89DAEC00C71EC9 /* PlantInfo */ = {
+			isa = PBXGroup;
+			children = (
+				5066CFBD2C89DB4300C71EC9 /* PlantInfoService.swift */,
+			);
+			path = PlantInfo;
 			sourceTree = "<group>";
 		};
 		506B9CDB2C7B7AD100220BA4 /* Models */ = {
@@ -182,6 +253,7 @@
 		506B9CE02C7B8EA100220BA4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				502F274C2C908DA0000372CB /* ChipsView.swift */,
 				506B9CE12C7B8EC500220BA4 /* NavigationView.swift */,
 			);
 			path = Views;
@@ -210,8 +282,9 @@
 		695224B62C78AF880033A64F /* Planty */ = {
 			isa = PBXGroup;
 			children = (
-				5066CF972C7CA15300C71EC9 /* Service */,
+				502F27522C90F0C8000372CB /* Extensions */,
 				506B9CDB2C7B7AD100220BA4 /* Models */,
+				5066CF972C7CA15300C71EC9 /* Service */,
 				695224E72C78B1CD0033A64F /* Presentation */,
 				695224B72C78AF880033A64F /* AppDelegate.swift */,
 				695224B92C78AF880033A64F /* SceneDelegate.swift */,
@@ -392,14 +465,25 @@
 			files = (
 				695224F12C7918E70033A64F /* Plant.swift in Sources */,
 				5066CFAE2C88EFEE00C71EC9 /* PlantInfoImageCell.swift in Sources */,
+				5066CFB92C89DA0D00C71EC9 /* PlantInfoAssembly.swift in Sources */,
 				5066CF9A2C7CA16F00C71EC9 /* PlantListService.swift in Sources */,
 				5066CF9F2C83C1A200C71EC9 /* PlantListInteractor.swift in Sources */,
+				5066CFB62C89D97300C71EC9 /* PlantInfoPresenter.swift in Sources */,
+				5066CFB32C89D89600C71EC9 /* PlantInfoInteractor.swift in Sources */,
 				695224F32C7920AC0033A64F /* PlantListCell.swift in Sources */,
 				695224B82C78AF880033A64F /* AppDelegate.swift in Sources */,
+				5066CFC02C8A235400C71EC9 /* PlantInfoLabelCell.swift in Sources */,
+				502F27542C90F0DD000372CB /* String+Ext.swift in Sources */,
 				5066CFA22C83C3FC00C71EC9 /* PlantListPresenter.swift in Sources */,
+				502F27512C909606000372CB /* PlantInfoChipsCollectionViewCell.swift in Sources */,
 				695224EA2C78B2180033A64F /* PlantListViewController.swift in Sources */,
 				5066CFA52C83C69E00C71EC9 /* PlantListAssembly.swift in Sources */,
 				506B9CE22C7B8EC500220BA4 /* NavigationView.swift in Sources */,
+				5066CFBE2C89DB4300C71EC9 /* PlantInfoService.swift in Sources */,
+				5066CFB02C89D71700C71EC9 /* PlantInfoViewController.swift in Sources */,
+				502F274D2C908DA0000372CB /* ChipsView.swift in Sources */,
+				502F274F2C9091FF000372CB /* PlantInfoChipsCollectionView.swift in Sources */,
+				5066CFC22C8B31CD00C71EC9 /* PlantInfoDescriptionCell.swift in Sources */,
 				695224BA2C78AF880033A64F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

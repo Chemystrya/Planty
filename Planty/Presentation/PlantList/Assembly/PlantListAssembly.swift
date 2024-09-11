@@ -8,7 +8,7 @@
 import UIKit
 
 final class PlantListAssembly {
-    func assemble() -> UIViewController {
+    static func assemble() -> UIViewController {
         let service: PlantListService = PlantListServiceImpl()
         let interactor = PlantListInteractor(plantListService: service)
         let view = PlantListViewController()
