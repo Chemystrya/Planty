@@ -17,6 +17,7 @@ protocol PlantListViewInput: AnyObject {
 
 protocol PlantListViewOutput: AnyObject {
     func viewLoaded()
+    func cellTapped(with plantCell: PlantListCellType)
 }
 
 final class PlantListViewController: UIViewController {
@@ -33,8 +34,8 @@ final class PlantListViewController: UIViewController {
         configure()
         
         tableView.register(PlantListCell.self, forCellReuseIdentifier: "PlantyCell")
-        tableView.register(PlantInfoImageCell.self, forCellReuseIdentifier: "PlantyImageCell")
         tableView.dataSource = self
+        tableView.delegate = self
 
         presenter?.viewLoaded()
     }
@@ -72,8 +73,17 @@ extension PlantListViewController: UITableViewDataSource {
             ) as? PlantListCell else { return UITableViewCell() }
 
             cell.configure(viewModel: viewModel)
+            cell.selectionStyle = .none
             return cell
         }
+    }
+}
+
+extension PlantListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedPlant = dataSource[indexPath.row]
+
+        presenter?.cellTapped(with: selectedPlant)
     }
 }
 
@@ -101,6 +111,6 @@ extension PlantListViewController {
     }
     
     private func configure() {
-        navigationView.configure(title: "Растения")
+        navigationView.configure(viewModel: NavigationViewModel(title: "Растения", backgroundColor: .white))
     }
 }
