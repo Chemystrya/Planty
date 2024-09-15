@@ -17,6 +17,7 @@ enum PlantInfoCellType {
 
 protocol PlantInfoViewInput: AnyObject {
     func reloadTableView(with dataSource: [PlantInfoCellType])
+    func updateNavigationView(with viewModel: NavigationViewModel)
 }
 
 protocol PlantInfoViewOutput: AnyObject {
@@ -28,6 +29,7 @@ final class PlantInfoViewController: UIViewController {
 
     private var dataSource: [PlantInfoCellType] = []
     private let tableView = UITableView()
+    private let navigationView = NavigationView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +73,12 @@ extension PlantInfoViewController: PlantInfoViewInput {
             self?.tableView.reloadData()
         }
     }
+
+    func updateNavigationView(with viewModel: NavigationViewModel) {
+        DispatchQueue.main.async { [weak self] in
+            self?.navigationView.configure(viewModel: viewModel)
+        }
+    }
 }
 
 extension PlantInfoViewController: UITableViewDataSource {
@@ -89,6 +97,7 @@ extension PlantInfoViewController: UITableViewDataSource {
             ) as? PlantInfoImageCell else { return UITableViewCell() }
 
             cell.configure(viewModel: viewModel)
+            cell.selectionStyle = .none
             return cell
 
         case .chips(let viewModel):
@@ -98,6 +107,7 @@ extension PlantInfoViewController: UITableViewDataSource {
             ) as? PlantInfoChipsCollectionView else { return UITableViewCell() }
 
             cell.configure(viewModel: viewModel)
+            cell.selectionStyle = .none
             return cell
             
         case .label(let viewModel):
@@ -107,6 +117,7 @@ extension PlantInfoViewController: UITableViewDataSource {
             ) as? PlantInfoLabelCell else { return UITableViewCell() }
 
             cell.configure(viewModel: viewModel)
+            cell.selectionStyle = .none
             return cell
        
         case .careTitle(let viewModel):
@@ -117,6 +128,7 @@ extension PlantInfoViewController: UITableViewDataSource {
             ) as? PlantInfoDescriptionCell else { return UITableViewCell() }
 
             cell.configure(viewModel: viewModel)
+            cell.selectionStyle = .none
             return cell
 
         case .plantDescription(let viewModel):
@@ -127,6 +139,7 @@ extension PlantInfoViewController: UITableViewDataSource {
             ) as? PlantInfoDescriptionCell else { return UITableViewCell() }
 
             cell.configure(viewModel: viewModel)
+            cell.selectionStyle = .none
             return cell
         }
     }
@@ -136,14 +149,22 @@ extension PlantInfoViewController {
     private func setup() {
         view.backgroundColor = .white
         view.addSubview(tableView)
-        tableView.separatorStyle = .none
+        view.addSubview(navigationView)
 
+        tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            tableView.topAnchor.constraint(equalTo: view.topAnchor)
+            tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: -68)
+        ])
+
+        navigationView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            navigationView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            navigationView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            navigationView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
 }

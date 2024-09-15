@@ -12,7 +12,9 @@ final class PlantListAssembly {
         let service: PlantListService = PlantListServiceImpl()
         let interactor = PlantListInteractor(plantListService: service)
         let view = PlantListViewController()
-        let presenter = PlantListPresenter(view: view, interactor: interactor)
+        let router = PlantListRouter()
+        router.transitionHandler = view
+        let presenter = PlantListPresenter(view: view, interactor: interactor, router: router)
         interactor.presenter = presenter
         view.presenter = presenter
 

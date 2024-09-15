@@ -16,9 +16,19 @@ final class PlantInfoAssembly {
         let service: PlantInfoService = PlantInfoServiceImpl()
         let interactor = PlantInfoInteractor(plantInfoService: service)
         let view = PlantInfoViewController()
-        let presenter = PlantInfoPresenter(view: view, interactor: interactor, inputModel: inputModel)
+        let factory = PlantInfoFactoryImpl()
+        let router = PlantInfoRouter()
+        router.transitionHandler = view
+        let presenter = PlantInfoPresenter(
+            view: view,
+            interactor: interactor,
+            factory: factory, 
+            router: router,
+            inputModel: inputModel
+        )
         interactor.presenter = presenter
         view.presenter = presenter
+        factory.navigationViewDelegate = presenter
 
         return view
     }

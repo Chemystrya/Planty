@@ -11,6 +11,14 @@
 		502F274F2C9091FF000372CB /* PlantInfoChipsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F274E2C9091FF000372CB /* PlantInfoChipsCollectionView.swift */; };
 		502F27512C909606000372CB /* PlantInfoChipsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F27502C909606000372CB /* PlantInfoChipsCollectionViewCell.swift */; };
 		502F27542C90F0DD000372CB /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F27532C90F0DD000372CB /* String+Ext.swift */; };
+		502F27562C923344000372CB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F27552C923344000372CB /* TabBarViewController.swift */; };
+		502F27592C92352E000372CB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F27582C92352E000372CB /* ProfileViewController.swift */; };
+		502F275D2C923578000372CB /* ShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F275C2C923578000372CB /* ShelfViewController.swift */; };
+		502F27602C9364C6000372CB /* TransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F275F2C9364C6000372CB /* TransitionHandler.swift */; };
+		502F27622C936648000372CB /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F27612C936648000372CB /* BaseRouter.swift */; };
+		502F27652C9366AD000372CB /* PlantListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F27642C9366AD000372CB /* PlantListRouter.swift */; };
+		502F27682C938B18000372CB /* PlantInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F27672C938B18000372CB /* PlantInfoRouter.swift */; };
+		502F276A2C975411000372CB /* PlantInfoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502F27692C975411000372CB /* PlantInfoFactory.swift */; };
 		5066CF9A2C7CA16F00C71EC9 /* PlantListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066CF992C7CA16F00C71EC9 /* PlantListService.swift */; };
 		5066CF9F2C83C1A200C71EC9 /* PlantListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066CF9E2C83C1A200C71EC9 /* PlantListInteractor.swift */; };
 		5066CFA22C83C3FC00C71EC9 /* PlantListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066CFA12C83C3FC00C71EC9 /* PlantListPresenter.swift */; };
@@ -58,6 +66,14 @@
 		502F274E2C9091FF000372CB /* PlantInfoChipsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInfoChipsCollectionView.swift; sourceTree = "<group>"; };
 		502F27502C909606000372CB /* PlantInfoChipsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInfoChipsCollectionViewCell.swift; sourceTree = "<group>"; };
 		502F27532C90F0DD000372CB /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		502F27552C923344000372CB /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		502F27582C92352E000372CB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		502F275C2C923578000372CB /* ShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfViewController.swift; sourceTree = "<group>"; };
+		502F275F2C9364C6000372CB /* TransitionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionHandler.swift; sourceTree = "<group>"; };
+		502F27612C936648000372CB /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		502F27642C9366AD000372CB /* PlantListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListRouter.swift; sourceTree = "<group>"; };
+		502F27672C938B18000372CB /* PlantInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInfoRouter.swift; sourceTree = "<group>"; };
+		502F27692C975411000372CB /* PlantInfoFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInfoFactory.swift; sourceTree = "<group>"; };
 		5066CF992C7CA16F00C71EC9 /* PlantListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListService.swift; sourceTree = "<group>"; };
 		5066CF9E2C83C1A200C71EC9 /* PlantListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListInteractor.swift; sourceTree = "<group>"; };
 		5066CFA12C83C3FC00C71EC9 /* PlantListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListPresenter.swift; sourceTree = "<group>"; };
@@ -120,6 +136,41 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		502F27572C9234A4000372CB /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				502F275C2C923578000372CB /* ShelfViewController.swift */,
+				502F27582C92352E000372CB /* ProfileViewController.swift */,
+				502F27552C923344000372CB /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		502F275E2C9364AB000372CB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				502F275F2C9364C6000372CB /* TransitionHandler.swift */,
+				502F27612C936648000372CB /* BaseRouter.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		502F27632C9366A3000372CB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				502F27642C9366AD000372CB /* PlantListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		502F27662C938AE7000372CB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				502F27672C938B18000372CB /* PlantInfoRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		5066CF972C7CA15300C71EC9 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +224,7 @@
 		5066CFA72C88EDEF00C71EC9 /* PlantInfo */ = {
 			isa = PBXGroup;
 			children = (
+				502F27662C938AE7000372CB /* Router */,
 				5066CFB72C89D9F200C71EC9 /* Assembly */,
 				5066CFB42C89D94B00C71EC9 /* Presenter */,
 				5066CFB12C89D86B00C71EC9 /* Interactor */,
@@ -222,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				5066CFB52C89D97300C71EC9 /* PlantInfoPresenter.swift */,
+				502F27692C975411000372CB /* PlantInfoFactory.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -282,6 +335,7 @@
 		695224B62C78AF880033A64F /* Planty */ = {
 			isa = PBXGroup;
 			children = (
+				502F275E2C9364AB000372CB /* Utils */,
 				502F27522C90F0C8000372CB /* Extensions */,
 				506B9CDB2C7B7AD100220BA4 /* Models */,
 				5066CF972C7CA15300C71EC9 /* Service */,
@@ -315,6 +369,7 @@
 		695224E72C78B1CD0033A64F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				502F27572C9234A4000372CB /* TabBar */,
 				5066CFA72C88EDEF00C71EC9 /* PlantInfo */,
 				506B9CE02C7B8EA100220BA4 /* Views */,
 				695224E82C78B1DC0033A64F /* PlantList */,
@@ -325,6 +380,7 @@
 		695224E82C78B1DC0033A64F /* PlantList */ = {
 			isa = PBXGroup;
 			children = (
+				502F27632C9366A3000372CB /* Router */,
 				5066CFA32C83C68E00C71EC9 /* Assembly */,
 				5066CFA02C83C3EE00C71EC9 /* Presenter */,
 				5066CF9D2C83C18F00C71EC9 /* Interactor */,
@@ -468,8 +524,14 @@
 				5066CFB92C89DA0D00C71EC9 /* PlantInfoAssembly.swift in Sources */,
 				5066CF9A2C7CA16F00C71EC9 /* PlantListService.swift in Sources */,
 				5066CF9F2C83C1A200C71EC9 /* PlantListInteractor.swift in Sources */,
+				502F27682C938B18000372CB /* PlantInfoRouter.swift in Sources */,
 				5066CFB62C89D97300C71EC9 /* PlantInfoPresenter.swift in Sources */,
+				502F27592C92352E000372CB /* ProfileViewController.swift in Sources */,
+				502F275D2C923578000372CB /* ShelfViewController.swift in Sources */,
 				5066CFB32C89D89600C71EC9 /* PlantInfoInteractor.swift in Sources */,
+				502F27602C9364C6000372CB /* TransitionHandler.swift in Sources */,
+				502F27622C936648000372CB /* BaseRouter.swift in Sources */,
+				502F276A2C975411000372CB /* PlantInfoFactory.swift in Sources */,
 				695224F32C7920AC0033A64F /* PlantListCell.swift in Sources */,
 				695224B82C78AF880033A64F /* AppDelegate.swift in Sources */,
 				5066CFC02C8A235400C71EC9 /* PlantInfoLabelCell.swift in Sources */,
@@ -478,10 +540,12 @@
 				502F27512C909606000372CB /* PlantInfoChipsCollectionViewCell.swift in Sources */,
 				695224EA2C78B2180033A64F /* PlantListViewController.swift in Sources */,
 				5066CFA52C83C69E00C71EC9 /* PlantListAssembly.swift in Sources */,
+				502F27562C923344000372CB /* TabBarViewController.swift in Sources */,
 				506B9CE22C7B8EC500220BA4 /* NavigationView.swift in Sources */,
 				5066CFBE2C89DB4300C71EC9 /* PlantInfoService.swift in Sources */,
 				5066CFB02C89D71700C71EC9 /* PlantInfoViewController.swift in Sources */,
 				502F274D2C908DA0000372CB /* ChipsView.swift in Sources */,
+				502F27652C9366AD000372CB /* PlantListRouter.swift in Sources */,
 				502F274F2C9091FF000372CB /* PlantInfoChipsCollectionView.swift in Sources */,
 				5066CFC22C8B31CD00C71EC9 /* PlantInfoDescriptionCell.swift in Sources */,
 				695224BA2C78AF880033A64F /* SceneDelegate.swift in Sources */,
